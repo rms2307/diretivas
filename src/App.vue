@@ -9,11 +9,20 @@
   <div v-posicao:absolute="150" v-texto="{ cor: 'green' }">
     Olá, eu sou um binding de argumento e valor
   </div>
+  <hr />
+  <h1 v-colorir-fundo="'red'">Diretiva customizada local</h1>
 </template>
 
 <script>
 export default {
   name: "App",
+  directives: {
+    colorirFundo: {
+      created: function (el, binding) {
+        el.style.background = binding.value;
+      },
+    },
+  },
   data: () => ({
     configuracaoTexto: {
       cor: "blue",
