@@ -6,7 +6,9 @@
   <p v-texto="{ cor: 'pink', tamanhoFonte: '150%', totalCaracteres: 15 }">
     Texto maior que 15
   </p>
-  <p v-texto>Diretiva sem parametros</p>
+  <div v-posicao:absolute="150" v-texto="{ cor: 'green' }">
+    Olá, eu sou um binding de argumento e valor
+  </div>
 </template>
 
 <script>
