@@ -1,4 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const Vue = createApp(App)
+
+Vue.directive('teste',{
+    created(){
+        console.log("Diretiva Aplicada...")
+    }
+})
+
+Vue.mount('#app')
